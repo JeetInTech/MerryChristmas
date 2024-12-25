@@ -1,0 +1,96 @@
+body {
+  background: linear-gradient(270deg, #ff0000, #ff8000, #ffffff, green);
+  background-size: 600% 600%;
+  animation: gradient-flow 10s ease infinite;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure no overflow issues */
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  width: 90%;
+  height: 90%;
+  visibility: hidden;
+}
+
+.loader {
+  -webkit-perspective: 700px;
+  perspective: 700px;
+  text-align: center;
+}
+
+.loader > span {
+  font-size: 110px; /* Adjust size for fitting */
+  font-family: "franklin gothic medium", sans-serif;
+  display: inline-block;
+  animation: flip 2.6s infinite linear;
+  transform-origin: 0 70%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.loader .line-break {
+  display: block; /* Forces a line break */
+}
+
+@keyframes flip {
+  35% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.loader > span:nth-child(even) {
+  color: white;
+}
+
+.loader > span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader > span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.loader > span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.loader > span:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.loader > span:nth-child(6) {
+  animation-delay: 1.5s;
+}
+
+.loader > span:nth-child(7) {
+  animation-delay: 1.8s;
+}
